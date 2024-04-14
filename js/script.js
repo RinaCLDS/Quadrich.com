@@ -1,4 +1,23 @@
 
+
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelector('.main-video .title');
+
+listVideo.forEach(video => {
+  video.onclick = () => {
+      listVideo.forEach(vid => vid.classList.remove('active'));
+      video.classList.add('active');
+      if (video.classList.contains('active')) {
+          let src = video.children[0].getAttribute('src');
+          mainVideo.src = src;
+          let text = video.children[1].innerHTML;
+          title.innerHTML = text;
+      }
+  }
+})
+
 $ = function(id) {
     return document.getElementById(id);
   }
@@ -15,7 +34,6 @@ document.querySelector('#login-btn').onclick = () =>{
     loginForm.classList.toggle('active');
     navbar.classList.remove('active');
 }
-
 let navbar = document.querySelector('.header .navbar');
 
 document.querySelector('#menu-btn').onclick = () =>{
@@ -62,4 +80,25 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
-  });
+});
+
+const banner = new Swiper('.banner', {
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+      el: '.swiper-pagination',
+  },
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+      el: '.swiper-scrollbar',
+  },
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
+  // effect: 'coverflow',
+  // slide, fade, cube, flip, creative
+});
