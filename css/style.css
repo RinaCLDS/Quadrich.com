@@ -273,10 +273,12 @@ section {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #008037;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.home .swiper-slide.slide1{
+  background-color: #008037;
 }
 .home .swiper-slide.slide2{
   background-color: #F3B733;
@@ -290,6 +292,19 @@ section {
   background-size: cover;
   background-position: right center;
 }
+.home .swiper-slide.slide5{
+  background-image: url(../image/supplyce_banner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+.home .swiper-slide.slide6{
+  background-image: url(../image/supplyco_banner2_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+
 .home .swiper-slide .banner-header{
   width: 25rem;
 }
@@ -305,10 +320,10 @@ section {
   padding: 5rem 10rem;
   width: 50%;
 }
-.home .swiper-slide.slide1 .banner-main > div:nth-child(1) .main-image,
+/* .home .swiper-slide.slide1 .banner-main > div:nth-child(1) .main-image,
 .home .swiper-slide.slide2 .banner-main > div:nth-child(1) .main-image{
   width:80%;
-}
+} */
 .home .swiper-slide .banner-main > div:nth-child(2){
   align-items: center;
   justify-content: center;
@@ -354,6 +369,10 @@ section {
 @media(max-width:767px){
   .home .swiper-slide .banner-header{
     width: 20rem;
+  }
+  .home .swiper-slide .banner-main > div:nth-child(1){
+    margin-bottom: -10rem;
+    z-index: 1;
   }
   .home .swiper-slide .banner_footer{
     border-radius: 2rem 2rem 0 0;
@@ -784,8 +803,6 @@ section {
   background-color: #1C563A;
   padding:1rem;
   color:white;
-  border-radius: 5px;
-
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{
@@ -1487,4 +1504,3 @@ section {
    }
 
 }
- 
