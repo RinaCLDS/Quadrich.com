@@ -371,7 +371,7 @@ section {
     width: 20rem;
   }
   .home .swiper-slide .banner-main > div:nth-child(1){
-    margin-bottom: -10rem;
+    margin-bottom: 0rem;
     z-index: 1;
   }
   .home .swiper-slide .banner_footer{
